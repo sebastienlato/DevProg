@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>DEVPROG — Compile the impossible</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="description" content="A descent through the machine, from the first keystroke to the last transistor." />
+  </head>
+  <body>
+    <canvas id="gl"></canvas>
+
+    <div id="boot">
+      <pre id="boot-log"></pre>
+      <div id="boot-bar"><i></i></div>
+      <div id="boot-gate" hidden>
+        <button id="enter-sound" type="button"><span class="prompt">▶</span> enter with sound</button>
+        <button id="enter-mute" type="button">enter muted</button>
+      </div>
+    </div>
+
+    <header class="hud hud-top">
+      <a class="logo" href="#top">DEVPROG<b>_</b></a>
+      <div class="hud-right">
+        <button id="hud-sound" type="button" aria-pressed="false"><i></i><i></i><i></i><i></i><span>sound off</span></button>
+        <span id="hud-act">ACT 01 — GENESIS</span>
+        <span id="hud-pct">000%</span>
+      </div>
+    </header>
+
+    <nav class="rail" id="rail" aria-label="Acts"></nav>
+
+    <footer class="hud hud-bottom">
+      <div class="term"><span class="prompt">~/devprog $</span> <span id="hud-cmd"></span><i class="caret"></i></div>
+      <span id="hud-fps">60 fps</span>
+    </footer>
+
+    <main id="copy">
+      <section class="s hero" data-a="-1" data-b="0.04">
+        <p class="eyebrow">v1.0.0 — build passing</p>
+        <h1><span data-scramble>COMPILE</span><span class="outline" data-scramble>THE IMPOSSIBLE</span></h1>
+        <p class="lede">A descent through the machine, from the first keystroke to the last transistor.</p>
+        <p class="hint">scroll to descend <i>↓</i></p>
+      </section>
+
+      <section class="s chapter right" data-a="0.085" data-b="0.172">
+        <p class="eyebrow">01 — machine</p>
+        <h2 data-scramble>GIVE THE IDEA A BODY</h2>
+      </section>
+      <section class="s chapter left" data-a="0.215" data-b="0.272">
+        <p class="eyebrow">02 — mind</p>
+        <h2 data-scramble>TEACH IT TO THINK</h2>
+      </section>
+      <section class="s chapter right" data-a="0.315" data-b="0.355">
+        <p class="eyebrow">03 — silicon</p>
+        <h2 data-scramble>THEN SHRINK IT TO NOTHING</h2>
+      </section>
+
+      <section class="s chapter left low" data-a="0.415" data-b="0.535">
+        <p class="eyebrow">act 02</p>
+        <h2 data-scramble>SILICON CITY</h2>
+        <p class="lede">Forty billion transistors. One address space. Every block a function, every street a wire.</p>
+      </section>
+
+      <section class="s chapter center" data-a="0.58" data-b="0.662">
+        <p class="eyebrow">act 03</p>
+        <h2 data-scramble>THE BUS</h2>
+        <p class="lede">Your code, moving at the speed of light.</p>
+      </section>
+
+      <section class="s card right" data-a="0.69" data-b="0.724">
+        <p class="eyebrow">artifact 01 / 04</p>
+        <h2 data-scramble>WRITE</h2>
+        <p class="lede">An editor that stays out of the way. One keystroke, and the whole board lights up.</p>
+      </section>
+      <section class="s card left" data-a="0.74" data-b="0.774">
+        <p class="eyebrow">artifact 02 / 04</p>
+        <h2 data-scramble>COMPILE</h2>
+        <p class="lede">A thousand loose fragments go in. One flawless binary comes out.</p>
+      </section>
+      <section class="s card right" data-a="0.79" data-b="0.824">
+        <p class="eyebrow">artifact 03 / 04</p>
+        <h2 data-scramble>SHIP</h2>
+        <p class="lede">From commit to orbit in a single push. No ceremony.</p>
+      </section>
+      <section class="s card left" data-a="0.84" data-b="0.872">
+        <p class="eyebrow">artifact 04 / 04</p>
+        <h2 data-scramble>SCALE</h2>
+        <p class="lede">One node or ten thousand. The topology draws itself.</p>
+      </section>
+
+      <section class="s finale" data-a="0.925" data-b="2">
+        <p class="eyebrow">the machine is ready</p>
+        <h2 data-scramble>ARE YOU?</h2>
+        <button id="cta" type="button"><span class="prompt">$</span> <span id="cta-text">npm create devprog@latest</span><em>copy</em></button>
+      </section>
+    </main>
+
+    <div id="cursor"></div>
+    <div id="track"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
